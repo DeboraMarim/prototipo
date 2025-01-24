@@ -1,0 +1,48 @@
+.nutricao h1{
+    color: black;
+}
+
+.nutricao {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+
+
+.CardNutricao p {
+    font-size: 1rem;
+    color: #DC052D;
+}
+
+.CardNutricao {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: auto;
+}
+
+.CardNutricao h2 {
+    font-size: 1.8rem;
+    color: #DC052D;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.meal {
+    margin-bottom: 15px;
+}
+
+.meal h3 {
+    font-size: 1.2rem;
+    color: #DC052D;
+    margin-bottom: 5px;
+}
+
+.meal p {
+    font-size: 1rem;
+    margin: 0;
+    color: #555;
+}
