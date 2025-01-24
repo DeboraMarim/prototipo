@@ -9,7 +9,7 @@ const Header = ({ setSelectedComponent }) => {
           <Hamburguer setSelectedComponent={setSelectedComponent} />
         </div>
         <div>
-          <h1>Bem-vinda,  Fernanda!</h1>
+          <h1>Bem-vinda,  Ana!</h1>
         </div>
       </section>
     </>
