@@ -1,17 +1,25 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/header/Header';
 import Perfil from './components/Perfil/Perfil';
 import Diario from './components/diario/Diario';
 import Nutricao from './components/nutricao/Nutricao';
 import Funcional from './components/funcional/Funcional';
+import Login from './pages/login/Login';
 
 const App = () => {
-  const [selectedComponent, setSelectedComponent] = useState(''); // Estado elevado
+  const [selectedComponent, setSelectedComponent] = useState('');
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  const Novo = () => <div>Alguma coisa extra.</div>; 
+  useEffect(() => {
+    const auth = localStorage.getItem('isAuthenticated');
+    if (auth === 'true') {
+      setIsAuthenticated(true);
+    }
+  }, []);
 
-  // Renderiza o componente com base no estado
+  const Novo = () => <div>Alguma coisa extra.</div>;
+
   const renderComponent = () => {
     switch (selectedComponent) {
       case 'Perfil':
@@ -22,18 +30,22 @@ const App = () => {
         return <Nutricao />;
       case 'Funcional':
         return <Funcional />;
-        case 'Novo':
-          return <Novo />;
+      case 'Novo':
+        return <Novo />;
       default:
         return <div>Selecione uma opção no menu.</div>;
     }
   };
 
+  if (!isAuthenticated) {
+    return <Login setIsAuthenticated={setIsAuthenticated} />;
+  }
+
   return (
     <>
-      <Header setSelectedComponent={setSelectedComponent} /> {/* Passa a função para atualizar o estado */}
+      <Header setSelectedComponent={setSelectedComponent} setIsAuthenticated={setIsAuthenticated} />
       <main style={{ padding: '20px' }}>
-        {renderComponent()} {/* Renderiza o componente selecionado */}
+        {renderComponent()}
       </main>
     </>
   );

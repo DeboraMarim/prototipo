@@ -1,5 +1,5 @@
 
-  
+  @import url('../../colors.css');
   /* Aqui começo a estilizar a CARD o componente principal e base para a minha aplicação */
   .card {
     display: flex;
@@ -40,7 +40,7 @@
   
   .card-section button {
     color: #fff;
-    background-color: #DC052D;
+    background-color: var(--orange1);
     border: none;
     border-radius: 1em;
     padding: 10px 25px; 
@@ -80,7 +80,6 @@
     right: -3%; 
   }
   
-  /* Aqui eu defino o estilo e localização da minha linha de demarcação do espaço */
   .line {
     border-top: 1px solid #e0dceb;
     position: relative;
@@ -94,9 +93,6 @@
     letter-spacing: 0.08em;
   }
   
-
-  
-  /* Aqui crédito o desenvolvimento desse código! Durante o processo de estudo, acabei refatorando o código, pois encontrei coisas desnecessárias*/
   .credit {
     font-size: 9.2px;
     transform: translateY(-75%);
@@ -109,30 +105,6 @@
   .credit a:hover {
     color: #7e38b2;
   }
-
-
-
-
-  /* ********************************************************************************************************* */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 #wrapper > div {
@@ -148,11 +120,11 @@
   }
   
   .card.course-id-2 .card-backgrund-color {
-    background-color: #DC052D;
+    background-color: var(--orange1);
   }
   
   .card.course-id-4 .card-backgrund-color {
-    background-color: #DC052D;
+    background-color: var(--orange1);
   }
   
   .card-group-heading {
@@ -181,7 +153,6 @@
     margin: 20px;
     cursor: pointer;
     -webkit-transition: -webkit-transform .2s ease-in, box-shadow .1s ease-in;
-    /*   -moz-transition: -moz-transform .1s ease-in, box-shadow .1s ease-in; */
     transition: transform .2s ease-in, box-shadow .1s ease-in;
     box-shadow: 0px 2px 2px #dfe6f0;
   }
@@ -204,18 +175,14 @@
     }
   }
   
-  
-  /* card shadow */
-  
+
   .card:hover {
     box-shadow: 0px 5px 10px #dfe6f0;
     -webkit-transform: translateY(-5px);
     transform: translateY(-5px);
   }
   
-  
-  /* header, footer, and body */
-  
+    
   .card-header,
   .card-footer,
   .card-body {
@@ -249,23 +216,13 @@
   .card-footer > p {
     margin: 0;
   }
-  
-  
-  /* header content */
-  
+    
   .card-header > h2 {
     font-size: 16px;
     padding: 6px;
-    /* (30 - font-size) / 2 */
     color: white;
   }
-  
-  
-  /* body content*/
-  
-  
-  /* card-info */
-  
+ 
   .card-info {
     height: 60%;
     display: flex;
@@ -306,9 +263,7 @@
     display: inline-block;
     display: inline-flex;
     justify-content: center;
-    /* align horizontal */
     align-items: center;
-    /* align vertical */
     border-radius: 100px;
   }
   
@@ -326,9 +281,6 @@
     vertical-align: middle;
   }
   
-  
-  /* delimiter */
-  
   .card-body-delimiter {
     background-color: #EDEFF1;
     width: 40px;
@@ -336,13 +288,8 @@
     border-radius: 2px;
     position: absolute;
     top: 112px;
-    /* should be info-height + body-padding - delimiter-height / 2 = 108 + 10 - 2 = 116, but since info-values contains a kind of padding it is hardcoded */
     left: calc(50% - 20px);
-    /* (body-width - delimiter-width) / 2 = (300 - 40) / 2 = 130 */
   }
-  
-  
-  /* tags */
   
   .card-tags {
     height: 40%;
@@ -362,10 +309,7 @@
     color: white;
     font-size: 12px;
   }
-  
-  
-  /* assignment type content */
-  
+    
   .card-assignment-icon {
     display: inline-block;
     display: inline-flex;
@@ -410,10 +354,7 @@
     display: inline-block;
     background-repeat: no-repeat;
   }
-  
-  
-  /* progress bar */
-  
+    
   .card-progress-bar {
     background-color: #DFE4E9;
     border-radius: 4px;
@@ -435,9 +376,6 @@
     -o-transition: width 1s ease-in-out;
     transition: width 1s ease-in-out;
   }
-  
-  
-  /* footer content */
   
   .card-footer-text {
     display: inline-block;

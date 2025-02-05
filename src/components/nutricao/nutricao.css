@@ -5,7 +5,7 @@
 .nutricao {
     font-family: Arial, sans-serif;
     padding: 20px;
-    background-color: #f8f8f8;
+    background-color: var(--font1);
     color: #333;
 }
 
@@ -13,7 +13,7 @@
 
 .CardNutricao p {
     font-size: 1rem;
-    color: #DC052D;
+    color: var(--orange1);
 }
 
 .CardNutricao {
@@ -26,7 +26,7 @@
 
 .CardNutricao h2 {
     font-size: 1.8rem;
-    color: #DC052D;
+    color: var(--orange1);
     text-align: center;
     margin-bottom: 20px;
 }
@@ -37,7 +37,7 @@
 
 .meal h3 {
     font-size: 1.2rem;
-    color: #DC052D;
+    color: var(--orange1);
     margin-bottom: 5px;
 }
 

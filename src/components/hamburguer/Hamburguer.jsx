@@ -1,6 +1,6 @@
 import './hamburguer.css';
 
-const Hamburguer = ({ setSelectedComponent }) => {
+const Hamburguer = ({ setSelectedComponent, setIsAuthenticated }) => {
   function menuOnClick() {
     document.getElementById("menu-bar").classList.toggle("change");
     document.getElementById("nav").classList.toggle("change");
@@ -8,9 +8,14 @@ const Hamburguer = ({ setSelectedComponent }) => {
   }
 
   function handleOptionClick(option) {
-    setSelectedComponent(option); // Atualiza o componente selecionado
-    menuOnClick(); // Fecha o menu
+    setSelectedComponent(option); 
+    menuOnClick(); 
   }
+
+  const handleLogout = () => {
+    localStorage.removeItem('isAuthenticated'); 
+    setIsAuthenticated(false); 
+  };
 
   return (
     <>
@@ -27,6 +32,7 @@ const Hamburguer = ({ setSelectedComponent }) => {
             <li><a href="#" onClick={() => handleOptionClick('Nutrição')}>Nutrição</a></li>
             <li><a href="#" onClick={() => handleOptionClick('Funcional')}>Funcional</a></li>
             <li><a href="#" onClick={() => handleOptionClick('Novo')}>Novo</a></li>
+            <li><a href="#" onClick={ handleLogout }>Sair</a></li>
           </ul>
         </nav>
       </div>

@@ -21,8 +21,8 @@ const Diario = () => {
         datasets: [
             {
                 data: [71, 29], // Percentual de consistência (Concluído e Pendente)
-                backgroundColor: ['#DC052D', '#f9f9f9'],
-                hoverBackgroundColor: ['#B90423', '#e0e0e0'],
+                backgroundColor: ['#ff9b2f', '#bdbfbf'],
+                hoverBackgroundColor: ['#B90423', '#bdbfbf'],
             },
         ],
     };
@@ -32,7 +32,7 @@ const Diario = () => {
         datasets: [
             {
                 data: [14, 2], // Água consumida (em litros) e meta restante
-                backgroundColor: ['#DC052D', '#f9f9f9'],
+                backgroundColor: ['#ff9b2f', '#bdbfbf'],
                 hoverBackgroundColor: ['#B90423', '#e0e0e0'],
             },
         ],

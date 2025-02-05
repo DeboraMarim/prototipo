@@ -2,8 +2,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #DC052D;
-    color: azure;
+    background-color: var(--orange1);
+    color: var(--font1);
     height: 80px;
     width: 100vw;
     gap: 80px;
@@ -13,6 +13,6 @@
 }
  
 h1{
-    color: #ffffff;
+    color: var(--font1);
 
 }
