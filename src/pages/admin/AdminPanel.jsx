@@ -14,7 +14,7 @@ import Dietas from './itens/Dietas';
 import Financeiro from './itens/Financeiro';
 
 import './adminPanel.css';
-
+ 
 const AdminPanel = () => {
   const navigate = useNavigate();
   const [dateTime, setDateTime] = useState(new Date());
