@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './login.css';
+import './userLogin.css';
 
 export default function Login({ setIsAuthenticated }) {
   const [username, setUsername] = useState('');
@@ -17,7 +17,7 @@ export default function Login({ setIsAuthenticated }) {
   };
 
   return (
-    <section className="login">
+    <section className="loginUser">
       <div className="box">
         <h2>Login</h2>
         <form onSubmit={handleLogin}>
