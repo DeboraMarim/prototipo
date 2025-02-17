@@ -7,30 +7,51 @@ const Nutricao = () => {
         <div className='nutricao'>
 
             <div className="CardNutricao">
+                <div className='nutri'>
                 <h2>Dieta do Dia</h2>
                 <p>{currentDate}</p>
+                </div>
 
-                <div className="meal">
-                    <h3>Café da manhã</h3>
-                    <h3>Horário: 07:00</h3>
-                    <p>Quantidade: 1 xícara de café, 2 fatias de pão integral</p>
-                </div>
-                <div className="meal">
-                    <h3>Almoço</h3>
-                    <h3>Horário: 12:30</h3>
-                    <p>Quantidade: 1 prato de salada, 1 porção de arroz, 1 filé de frango grelhado</p>
-                </div>
-                <div className="meal">
-                    <h3>Lanche da Tarde</h3>
-                    <h3>Horário: 16:00</h3>
-                    <p>Quantidade: 1 maçã, 1 punhado de nozes</p>
-                </div>
-                <div className="meal">
-                    <h3>Jantar</h3>
-                    <h3>Horário: 19:30</h3>
-                    <p>Quantidade: 1 sopa de legumes, 1 pedaço de peixe grelhado</p>
-                </div>
-            </div>
+
+                <div className="meal-section">
+            <h2 className="meal-title">Café da Manhã</h2>
+            <p className="meal-time">Horário: 07:00</p>
+            <ul className="meal-items">
+                <li>1 xícara de café</li>
+                <li>2 fatias de pão integral</li>
+            </ul>
+        </div>
+
+        <div className="meal-section">
+            <h2 className="meal-title">Almoço</h2>
+            <p className="meal-time">Horário: 12:30</p>
+            <ul className="meal-items">
+                <li>1 prato de salada</li>
+                <li>1 porção de arroz</li>
+                <li>1 filé de frango grelhado</li>
+            </ul>
+        </div>
+
+        <div className="meal-section">
+            <h2 className="meal-title">Lanche da Tarde</h2>
+            <p className="meal-time">Horário: 16:00</p>
+            <ul className="meal-items">
+                <li>1 maçã</li>
+                <li>1 punhado de nozes</li>
+            </ul>
+        </div>
+
+        <div className="meal-section">
+            <h2 className="meal-title">Jantar</h2>
+            <p className="meal-time">Horário: 19:30</p>
+            <ul className="meal-items">
+                <li>1 sopa de legumes</li>
+                <li>1 pedaço de peixe grelhado</li>
+            </ul>
+        </div>
+
+
+        </div>   
         </div>
     );
 };

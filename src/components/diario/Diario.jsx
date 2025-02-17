@@ -1,6 +1,6 @@
 import './diario.css';
-import FloatingLabel from 'react-bootstrap/FloatingLabel';
-import Form from 'react-bootstrap/Form';
+// import FloatingLabel from 'react-bootstrap/FloatingLabel';
+// import Form from 'react-bootstrap/Form';
 import { Doughnut } from 'react-chartjs-2';
 
 import {
@@ -12,15 +12,14 @@ import {
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-
-
 const Diario = () => {
+
 
     const consistencyData = {
         labels: ['Concluído', 'Pendente'],
         datasets: [
             {
-                data: [71, 29], // Percentual de consistência (Concluído e Pendente)
+                data: [71, 29],
                 backgroundColor: ['#ff9b2f', '#bdbfbf'],
                 hoverBackgroundColor: ['#B90423', '#bdbfbf'],
             },
@@ -31,117 +30,98 @@ const Diario = () => {
         labels: ['Consumido', 'Meta Restante'],
         datasets: [
             {
-                data: [14, 2], // Água consumida (em litros) e meta restante
+                data: [14, 2],
                 backgroundColor: ['#ff9b2f', '#bdbfbf'],
                 hoverBackgroundColor: ['#B90423', '#e0e0e0'],
             },
         ],
     };
 
-
     return (
-        <div className='diario'>
-            {/* Cabeçalho */}
-            <header className='diario-header'>
-                <h1>Meu Diário</h1>
+        <div className="Dcontainer">
+            <header className="Dheader">
+                <h1 className="Dtext-3xl font-bold text-white text-center">Meu Diário</h1>
             </header>
 
-            {/* Pílulas da Mente Magra */}
-            <section className='pilulas'>
-                <h2>Pílulas da Mente Magra</h2>
-                <div className='pilulas-container'>
-                    <p><em>"A mudança começa em pequenos passos."</em></p>
+            <div className="Dcard">
+                <h2 className="Dtext-xl font-semibold mb-4">Pílulas da Mente Magra</h2>
+                <p className="italic text-gray-600">A mudança começa em pequenos passos.</p>
+            </div>
+
+            <div className="TXcard">
+                <h2 className="Dtext-xl font-semibold mb-4">Escreva no Diário</h2>
+                <textarea
+                    className="Dw-full p-4 border rounded-lg"
+                    rows="5"
+                    placeholder="Escreva aqui seus pensamentos do dia..."
+                ></textarea>
+                <button className="Dsave-btn mt-4">Salvar</button>
+            </div>
+
+
+
+            <div className="Dcard">
+                <h2 className="text-xl font-semibold mb-4">Como Você Está se Sentindo?</h2>
+                <div className="Dflex flex-wrap justify-center gap-2">
+                    <button className="Dmood-btn">😊 Feliz</button>
+                    <button className="Dmood-btn">😔 Triste</button>
+                    <button className="Dmood-btn">😡 Com Raiva</button>
+                    <button className="Dmood-btn">😨 Ansioso</button>
                 </div>
-            </section>
+            </div>
 
-            {/* Espaço para o Diário */}
-            <section className='diario-texto'>
-                <h2>Escreva no Diário</h2>
-
-
-      <FloatingLabel controlId="floatingTextarea2">
-        <Form.Control
-          as="textarea"
-          placeholder="Escreva aqui seus pensamentos do dia..."
-          style={{ height: '100px', color: 'black' }}
-        />
-      </FloatingLabel>
-                {/* <textarea 
-                    placeholder='Escreva aqui seus pensamentos do dia...' 
-                    rows='10'>
-                </textarea> */}
-                <button className='salvar'>Salvar</button>
-            </section>
-
-            {/* Mood Tracker */}
-            <section className='mood-tracker'>
-                <h2>Como Você Está se Sentindo?</h2>
-                <div className='moods'>
-                    <button className='mood'>😊 Feliz</button>
-                    <button className='mood'>😔 Triste</button>
-                    <button className='mood'>😡 Com Raiva</button>
-                    <button className='mood'>😨 Ansioso</button>
+            <div className="CHcard">
+                <h2 className="text-xl font-semibold mb-4">Checklist do Dia</h2>
+                <div className="space-y-2">
+                    <label className="flex items-center">
+                        <input type="checkbox" className="mr-2" />
+                        Bebi 2 litros de água
+                    </label>
+                    <label className="flex items-center">
+                        <input type="checkbox" className="mr-2" />
+                        Meditei sobre as pílulas diárias
+                    </label>
+                    <label className="flex items-center">
+                        <input type="checkbox" className="mr-2" />
+                        Escrevi no diário
+                    </label>
+                    <label className="flex items-center">
+                        <input type="checkbox" className="mr-2" />
+                        Marquei o humor do dia
+                    </label>
+                    <label className="flex items-center">
+                        <input type="checkbox" className="mr-2" />
+                        Concluí a meta de atividade física
+                    </label>
+                    <label className="flex items-center">
+                        <input type="checkbox" className="mr-2" />
+                        Dormi 8 horas
+                    </label>
+                    <label className="flex items-center">
+                        <input type="checkbox" className="mr-2" />
+                        Segui a dieta correta
+                    </label>
                 </div>
-            </section>
+            </div>
 
-            {/* Checklist Diária */}
-            <section className='checklist'>
-                <h2>Checklist do Dia</h2>
-                <ul>
-                    <li><input type='checkbox' /> Bebi 2 litros de água</li>
-                    <li><input type='checkbox' /> Meditei sobre as pílulas diárias</li>
-                    <li><input type='checkbox' /> Escrevi no diário</li>
-                    <li><input type='checkbox' /> Marquei o humor do dia</li>
-                    <li><input type='checkbox' /> Concluí a meta de atividade física</li>
-                    <li><input type='checkbox' /> Dormi 8 horas</li>
-                    <li><input type='checkbox' /> Segui a dieta correta</li>
-                </ul>
-            </section>
-
-            {/* Dashboards de Desempenho */}
-            <section className='dashboards'>
-    <h2>Desempenho</h2>
-
-
-                <div className='grafico'>
-                    <h3>Consistência nas Atividades</h3>
-                    <Doughnut data={consistencyData} />
-                    <p>Registros no diário: 71%</p>
+            {/* Gráficos corrigidos */}
+            <div className="Dgrid md:grid-cols-2 gap-4">
+                <div className="Dcard">
+                    <h2 className="text-xl font-semibold mb-4">Consistência nas Atividades</h2>
+                    <div className="Dchart-container">
+                        <Doughnut data={consistencyData} />
+                    </div>
+                    <p className="text-center mt-4">Registros no diário: 71%</p>
                 </div>
 
-                {/* Dashboard de Hidratação */}
-                <div className='grafico'>
-                    <h3>Hidratação Semanal</h3>
-                    <Doughnut data={hydrationData} />
-                    <p>Água consumida esta semana: 14L</p>
+                <div className="Dcard">
+                    <h2 className="text-xl font-semibold mb-4">Hidratação Semanal</h2>
+                    <div className="Dchart-container">
+                        <Doughnut data={hydrationData} />
+                    </div>
+                    <p className="text-center mt-4">Água consumida esta semana: 14L</p>
                 </div>
-
-
-    {/* Dashboard de Consistência nas Atividades */}
-    <div className='grafico'>
-        <h3>Consistência nas Atividades</h3>
-        <p>Registros no diário: 5/7 dias (71%)</p>
-        <p>Pílulas diárias concluídas: 6/7 (85%)</p>
-        <p>Checklist diário concluído: 4/7 dias (57%)</p>
-    </div>
-
-    {/* Dashboard de Desempenho Físico */}
-    <div className='grafico'>
-        <h3>Desempenho Físico</h3>
-        <p>Água consumida esta semana: 14L</p>
-        <p>Metas de atividade física concluídas: 5/7 dias (71%)</p>
-        <p>Média de horas de sono por dia: 7.5h</p>
-    </div>
-
-    {/* Dashboard de Desempenho Emocional */}
-    <div className='grafico'>
-        <h3>Desempenho Emocional</h3>
-        <p>Média de humor: 😊 Feliz</p>
-        <p>Sentimentos registrados: 5/7 dias (71%)</p>
-        <p>Picos de ansiedade reduzidos: 3 vezes esta semana</p>
-    </div>
-</section>
-
+            </div>
         </div>
     );
 };

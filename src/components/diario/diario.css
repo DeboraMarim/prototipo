@@ -1,99 +1,187 @@
-.diario {
-    font-family: Arial, sans-serif;
-    background-color: var(--orange1);
-    color: #fff;
+:root {
+    --primary: #ff9b2f;
+    --secondary: #f88f1f;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+
+.Dcontainer {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
 }
 
-.diario-header {
+.Dheader {
+margin-bottom: 50px;
+
+}
+
+.Dheader h1{
+    color: #333;
+    
+    }
+
+.Dcard {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-    margin-bottom: 20px;
 }
 
-.pilulas, .diario-texto, .mood-tracker, .checklist, .dashboards {
-    margin-bottom: 20px;
+
+.TXcard {
     background: #fff;
-    color: #000;
-    border-radius: 10px;
-    padding: 15px;
-}
-
-.diario-texto button{
-    margin-top: 15px;
-}
-
-
-.pilulas-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.ver-mais, .salvar, .mood {
-    background-color: var(--orange1);
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.ver-mais:hover, .salvar:hover, .mood:hover {
-    background-color: var(--orange1);
-}
-
-.moods {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.checklist ul {
-    list-style: none;
-    padding: 0;
-}
-
-.checklist li {
-    margin: 10px 0;
-    display: flex;
-    align-items: center;
-}
-
-.checklist input {
-    margin-right: 10px;
-}
-
-.grafico {
-    font-size: 14px;
-}
-
-
-.dashboards {
-    background: #fff;
-    color: #000;
-    padding: 15px;
-    border-radius: 10px;
-}
-
-.grafico {
+    border-radius: 15px;
+    padding: 20px;
     margin-bottom: 20px;
-    padding: 10px;
-    background: #f9f9f9;
-    border: 1px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.TXcard textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 12px;
+    border: 2px solid #ff9b2f;
+    border-radius: 10px;
+    font-size: 16px;
+    resize: none;
+    outline: none;
+    background: white;
+    color: #333;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.TXcard textarea:focus {
+    border-color: #B90423;
+    border: 2px solid #ff9b2f;
+}
+
+.Dsave-btn {
+    background: #ff9b2f;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
     border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
 }
 
-.grafico h3 {
-    font-size: 18px;
-    background-color: var(--orange1);
-    margin-bottom: 10px;
-    color: var(--font1);
-    padding: 5%;
+.Dsave-btn:hover {
+    background: #B90423; /* Tom mais escuro no hover */
+}
+
+
+.CHcard {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.space-y-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Adiciona espaçamento entre os itens */
+}
+
+.space-y-2 label {
+    display: flex;
+    align-items: center;
+    background: #f9f9f9; /* Fundo sutil */
+    padding: 10px;
+    border-radius: 8px; /* Cantos arredondados */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.space-y-2 label:hover {
+    background: #ffe6c9; /* Tom suave ao passar o mouse */
+}
+
+.space-y-2 input[type="checkbox"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ff9b2f; /* Cor do tema */
     border-radius: 5px;
-    box-shadow:0 5px 5px rgba(0, 0, 0, 0.108);
+    margin-right: 10px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s;
 }
 
-.grafico p {
-    margin: 5px 0;
-    font-size: 14px;
+.space-y-2 input[type="checkbox"]:checked {
+    background-color: #ff9b2f;
+    border-color: #ff9b2f;
 }
+
+.space-y-2 input[type="checkbox"]::before {
+    content: "✔";
+    font-size: 14px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.space-y-2 input[type="checkbox"]:checked::before {
+    display: block;
+}
+
+.Dmood-btn {
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 1px solid var(--primary);
+    margin: 5px;
+    transition: all 0.3s;
+    background-color: #ffffff;
+    color: #f88f1f;
+}
+
+.Dmood-btn:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.Dsave-btn {
+    background: var(--primary);
+    color: white;
+    padding: 10px 30px;
+    border-radius: 25px;
+    border: none;
+    transition: all 0.3s;
+}
+
+.Dsave-btn:hover {
+    background: var(--secondary);
+}
+
+.Dchart-container {
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .Dcontainer {
+        padding: 10px;
+    }
+}
+

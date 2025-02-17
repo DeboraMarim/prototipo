@@ -33,7 +33,7 @@ const App = () => {
       case 'Novo':
         return <Novo />;
       default:
-        return <div>Selecione uma opção no menu.</div>;
+        return <Perfil />;
     }
   };
 

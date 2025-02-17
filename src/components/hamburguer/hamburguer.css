@@ -16,7 +16,7 @@
   .bar {
     height: 5px;
     width: 100%;
-    background-color: var(--font1);
+    background-color: var(--orange1);
     display: block;
     border-radius: 5px;
     transition: 0.3s ease;

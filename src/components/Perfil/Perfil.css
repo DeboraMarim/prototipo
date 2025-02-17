@@ -1,6 +1,11 @@
 
   @import url('../../colors.css');
-  /* Aqui começo a estilizar a CARD o componente principal e base para a minha aplicação */
+
+  @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
   .card {
     display: flex;
     flex-direction: column;
@@ -36,6 +41,10 @@
     margin-top: 150px;
     transform: translateY(-25%);
     text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
   }
   
   .card-section button {
@@ -44,7 +53,12 @@
     border: none;
     border-radius: 1em;
     padding: 10px 25px; 
-    box-shadow: 0 9px 30px 0 rgba(0,0,0,0.1);    
+    box-shadow: 0 9px 30px 0 rgba(0,0,0,0.1);
+    max-width: 450px;
+    margin: auto;    
+  }
+  .card-section button:hover{
+    font-size: 105%;  
   }
 
 
@@ -401,3 +415,188 @@
   .ml-checkmark:after {
     content: "✔";
   }
+
+  /*  modal  */
+
+
+  .profile-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    /* background: white; */
+    /* border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+}
+
+.section {
+    border-left: 4px solid var(--orange1);
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: var(--orange2);
+    border-radius: 0 10px 10px 0;
+    transition: transform 0.2s;
+    text-align: left;
+}
+
+.section:hover {
+    transform: translateX(5px);
+}
+
+p {
+    margin: 0.8rem 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+strong {
+    color: var(--orange1);
+    font-weight: 600;
+}
+
+@media (max-width: 640px) {
+    .profile-container {
+        margin: 1rem;
+        padding: 1rem;
+    }
+}
+
+.bg-orange1 { background-color: var(--orange1); }
+.bg-orange2 { background-color: var(--orange2); }
+.bg-gray1 { background-color: var(--gray1); }
+.text-orange1 { color: var(--orange1); }
+
+
+
+.cardbannera {
+  width: 100%;
+  margin: auto;
+  margin-bottom: 50px;
+  max-width: 450px;
+  background: linear-gradient(180deg, #ffe0bf 50%, #ffffff 50%);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.profile-container {
+  padding: 2rem;
+  text-align: center;
+}
+
+
+.profile-container img {
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.103);
+
+}
+
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #fbe1c1;
+  object-fit: cover;
+  margin-bottom: 1rem;
+
+}
+
+.profile-info {
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.profile-name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.profile-details {
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+}
+
+.location-icon {
+  width: 16px;
+  height: 16px;
+  fill: white;
+}
+
+@media (min-width: 768px) {
+  .card {
+      max-width: 400px;
+  }
+
+  .profile-image {
+      width: 180px;
+      height: 180px;
+  }
+}
+
+
+/*  dashborads */
+
+.Ndashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto; 
+}
+.Ncard {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.Ncard:hover {
+  transform: translateY(-5px);
+}
+
+.Ncard-header {
+  color: #ff9b2f;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  border-bottom: 2px solid #fbe1c1;
+  padding-bottom: 10px;
+}
+
+.Ncard-content {
+  display: grid;
+  gap: 15px;
+}
+
+.Ninfo-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: #fbe1c1;
+  border-radius: 8px;
+}
+
+.Ninfo-item svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  fill: #ff9b2f;
+}
+
+.Ninfo-label {
+  font-weight: 500;
+  color: #333;
+  margin-right: 10px;
+}
+
+.Ninfo-value {
+  margin-left: auto;
+  color: #ff9b2f;
+  font-weight: bold;
+}

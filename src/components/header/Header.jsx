@@ -9,7 +9,7 @@ const Header = ({ setSelectedComponent, setIsAuthenticated }) => {
           <Hamburguer setSelectedComponent={setSelectedComponent} setIsAuthenticated={setIsAuthenticated} />
         </div>
         <div>
-          <h1>Bem-vinda, Ana!</h1>
+          <h1> </h1>
         </div>
       </section>
     </>

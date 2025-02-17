@@ -3,7 +3,11 @@ import './funcional.css';
 const Funcional = () => {
     return (
         <div className="funcional">
-            <h5>Treinos Funcionais disponíveis!</h5>
+
+            <div className='headerTreinos'>
+                          <h3>Treinos Funcionais disponíveis!</h3>
+  
+            </div>
             <div className="videos">
                 <iframe 
                     width="100%" 

@@ -31,7 +31,7 @@ const Hamburguer = ({ setSelectedComponent, setIsAuthenticated }) => {
             <li><a href="#" onClick={() => handleOptionClick('Diário')}>Diário</a></li>
             <li><a href="#" onClick={() => handleOptionClick('Nutrição')}>Nutrição</a></li>
             <li><a href="#" onClick={() => handleOptionClick('Funcional')}>Funcional</a></li>
-            <li><a href="#" onClick={() => handleOptionClick('Novo')}>Novo</a></li>
+            {/* <li><a href="#" onClick={() => handleOptionClick('Novo')}>Novo</a></li> */}
             <li><a href="#" onClick={ handleLogout }>Sair</a></li>
           </ul>
         </nav>
